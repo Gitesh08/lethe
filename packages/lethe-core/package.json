@@ -1,0 +1,32 @@
+{
+  "name": "@lethe/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./properties": "./src/properties/index.ts",
+    "./fixtures": "./src/fixtures/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run test:unit && npm run test:perf",
+    "test:unit": "vitest run --exclude \"test/**/*.perf.test.ts\" --exclude \"**/node_modules/**\" --passWithNoTests",
+    "test:perf": "vitest run --no-file-parallelism --pool=forks --poolOptions.forks.singleFork \"perf.test.ts\""
+  },
+  "peerDependencies": {
+    "fast-check": "3.23.2"
+  },
+  "peerDependenciesMeta": {
+    "fast-check": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "fast-check": "3.23.2",
+    "typescript": "5.9.3",
+    "vitest": "2.1.9"
+  }
+}

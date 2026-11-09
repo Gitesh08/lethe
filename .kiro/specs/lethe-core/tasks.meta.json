@@ -1,0 +1,1151 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Write `src/types.ts` — all exported types verbatim from design.md §Data Models: `EngramNode`, `EngramState`, `ScoredEngram`, `ContradictionReport`, `TombstoneRecord`, `SleepConsolidationResult`, `LetheConfig`, `LedgerEvent`, `ParsedDoc`, `Annotation`, `StanceMatch`, `Stance`, `Axis`, `Ontology`, `ConsolidationPlan`, `VirtualWorkspace`, `ErrorCode`, `LetheError`, `Result`, `Tier`, `EngramStatus`, `SpecInvariant`. All fields `readonly`. Zero `any`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821675035
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821691155
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793822785421
+      }
+    ],
+    "1.2 Write `src/result.ts` — `Result<T,E>` discriminated union, `ok<T>(value)`, `err<E>(error)`, `match<T,E,R>(result, cases)` helpers. File must be ≤ 40 lines.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821675253
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821695163
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793822790393
+      }
+    ],
+    "1.3 Write `src/config.ts` — `DEFAULT_CONFIG: LetheConfig` compile-time constant with all canonical defaults (s0=5, sMax=120, sMin=0.5, beta=0.5, alpha=0.25, wDefault=1, wSpec=4, specFloor=0.50, hotMin=0.60, cryptMax=0.25, budgetTokens=4000, dedupeJaccard=0.85, granularity=\"section\"). Add `validateConfig(partial: unknown): Result<LetheConfig, LetheError>` that merges over `DEFAULT_CONFIG` and validates every field constraint.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821675378
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821699758
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793822799025
+      }
+    ],
+    "2.1 Write `src/parse/hash.ts` — self-contained pure synchronous SHA-256 with no platform API calls (no `globalThis.crypto`, no `node:crypto`). Returns lowercase 64-char hex. Must satisfy: `sha256(\"abc\") === \"ba7816bf8f01cfea414140de5dae2ec73b00361bbef0469648079788f8f845a\"`. Normalize input: strip trailing whitespace per line, normalize CRLF to LF, before hashing.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821675574
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793822804528
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793828678244
+      }
+    ],
+    "2.2 Write `src/parse/slug.ts` — `slugify(relativePath: string, headingPath: readonly string[]): string`. Join path and heading elements with `#`, lowercase the whole string, replace runs of non-`[a-z0-9]` chars with a single `-`, trim leading/trailing `-`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821675693
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793822808920
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793828682963
+      }
+    ],
+    "3.1 Write `src/parse/frontmatter.ts` — `parseFrontmatter(text: string): Result<{ fm: string | null; rest: string }, LetheError>`. Handle: no opening `---` → `{ fm: null, rest: text }`; valid block with closing `---` → `{ fm: rawBlock, rest: remainder }`; opening `---` present but no closing `---` before first heading or EOF → `err({ code: \"PARSE_INVALID_FRONTMATTER\" })`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821675814
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793828733850
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231058920
+      }
+    ],
+    "3.2 Write `src/parse/section.ts` — `splitSections(text: string, granularity: \"section\" | \"bullet\"): RawSection[]`. Section mode: walk line-by-line, track H2/H3 heading stack, compute `headingPath` as ancestor-plus-own heading text array, set `span.start` to first char of heading line and `span.end` exclusive one past section body. Bullet mode: identify top-level list items (`- `, `* `, `N. ` at column 0), include nested sub-list lines, set `headingPath` to zero-based decimal index array. Empty document → empty array.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821675931
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793828738658
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231060141
+      }
+    ],
+    "3.3 Write `src/parse/annotation.ts` — `parseAnnotation(body: string): Annotation`. Scan for first `<!-- lethe: ... -->`. Extract key-value pairs separated by `;`. Keys: `globs` (split by `,`, trim) → `globs[]`; `spec` (split by `,`, trim) → `specLinks[]`; `pin` (`=== \"true\"`) → `pinned`. Unrecognized keys silently ignored. Always returns a valid `Annotation` — never fails.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676049
+      },
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793828743160
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231061183
+      }
+    ],
+    "4.1 Write `src/parse/document.ts` — `parseDocument(file: string, text: string, cfg: LetheConfig): Result<ParsedDoc, LetheError>` and `serializeDocument(doc: ParsedDoc): string`. `parseDocument` orchestrates: `parseFrontmatter` → `splitSections` → for each section: `parseAnnotation`, `slugify`, `sha256(normalizedBody)`, `Math.ceil(body.length / 4)` for tokens. Check for duplicate `id` values → return `PARSE_DUPLICATE_ID` if found. `serializeDocument` returns `doc.rawText` (the original input stored verbatim in `ParsedDoc`).": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676170
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231066922
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231185841
+      }
+    ],
+    "4.3 Write `test/arbitraries/engram.arb.ts` — `fc.Arbitrary<string>` for synthetic markdown documents. Generates: random H2/H3 heading counts (0–10), random body text, optional YAML frontmatter, optional `<!-- lethe: -->` annotations with random keys, CRLF line endings variant, unicode in headings (CJK, Arabic), zero-heading documents.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676285
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231569728
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231654370
+      }
+    ],
+    "4.4 Write `src/properties/p12-serialize.ts` — P12: `FOR ALL` markdown documents `d` where `parseDocument(file, d, cfg)` returns `ok`, `serializeDocument(result.value) === d`. Export as `p12Serialize(cfg: LetheConfig): fc.IProperty<string>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676402
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231570221
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231728023
+      }
+    ],
+    "5. Checkpoint — Parser complete": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676512
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232694697
+      }
+    ],
+    "6.1 Write `src/decay/delta.ts` — `computeDeltaC(state: EngramState, nowCommit: number, nowISO: string, alpha: number): number`. `commitsSince = Math.max(0, nowCommit - state.lastReinforcedCommit)`. `daysSince = Math.max(0, (new Date(nowISO).getTime() - new Date(state.lastReinforcedAt).getTime()) / 86400000)`. Return `commitsSince + alpha * daysSince`. `new Date(isoString)` (with argument) is permitted.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676625
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231728431
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231848431
+      }
+    ],
+    "6.2 Write `src/decay/retention.ts` — `computeRetention(deltaC: number, S: number, W: number, sMin: number): number`. Clamp: `S_eff = Math.max(S, sMin)`. Return `Math.exp(-deltaC / (S_eff * W))`. Always in `(0, 1]` for valid inputs.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676743
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231729409
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231849344
+      }
+    ],
+    "6.3 Write `src/decay/weight.ts` — `computeWeight(node: EngramNode, specs: readonly SpecInvariant[], cfg: LetheConfig): { W: number; isProtected: boolean; floor: number }`. If `node.pinned === true` OR `node.specLinks` intersects any active `SpecInvariant.specName`: `W = cfg.wSpec`, `isProtected = true`, `floor = cfg.specFloor`. Otherwise: `W = cfg.wDefault`, `isProtected = false`, `floor = 0`. Pinned + spec-linked → apply `wSpec` once only.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676860
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231731032
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231850985
+      }
+    ],
+    "6.4 Write `src/decay/reinforce.ts` — `reinforce(state: EngramState, ev: LedgerEvent, cfg: LetheConfig): EngramState`. Compute `newS = Math.min(state.stability * (1 + cfg.beta), cfg.sMax)`. Return new state with updated `stability`, `lastReinforcedCommit`, `lastReinforcedAt`, incremented `reinforcements`. Input is not mutated.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821676978
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231732173
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231852238
+      }
+    ],
+    "7.1 Write `test/arbitraries/state.arb.ts` — arbitrary `EngramState`: `stability` in `[cfg.sMin, cfg.sMax]`, non-negative `lastReinforcedCommit`, valid ISO `lastReinforcedAt`, non-negative `reinforcements`. Add bursty variant (rapid commit increments) and long-idle variant (`stability` near `sMin`, large `commitsSince`).": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821677093
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231860033
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231968438
+      }
+    ],
+    "7.2 Write `test/arbitraries/ledger.arb.ts` — arbitrary `LedgerEvent[]`: all three types, random `filesTouched` and `cited` arrays, non-decreasing commit counters. Include bursty variant (≥ 20 events within `Δc ≤ 5`) and empty-array variant.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821677216
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231860867
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231968652
+      }
+    ],
+    "7.3 Write `src/properties/p1-range.ts` — P1: `FOR ALL` valid `(EngramState, nowCommit, nowISO, cfg)`, `computeRetention` returns a value in `(0, 1]`. Export `p1Range(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821677332
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231985002
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232110179
+      }
+    ],
+    "7.4 Write `src/properties/p2-monotonic.ts` — P2: `FOR ALL` `(state, Δc₁, Δc₂, cfg)` where `Δc₁ ≤ Δc₂`, `computeRetention(Δc₁, S, W, sMin) ≥ computeRetention(Δc₂, S, W, sMin)`. Export `p2Monotonic(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821677450
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231985155
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232110491
+      }
+    ],
+    "7.5 Write `src/properties/p3-reinforce.ts` — P3: `FOR ALL` `(state, event, cfg)`, after `reinforce(state, event, cfg)` the new `stability ≥ state.stability` and `computeRetention(0, newS, W, sMin) ≥ computeRetention(0, state.stability, W, sMin)`. Export `p3Reinforce(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821677564
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231985248
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232110330
+      }
+    ],
+    "7.6 Write `src/properties/p4-protected.ts` — P4: `FOR ALL` scored workspace and consolidation plan, no protected engram appears in `plan.toArchive` and every protected engram has `retention ≥ cfg.specFloor`. (Requires stub `planConsolidation` that returns empty plan for now; wire real implementation in Milestone 11.)": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821677685
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231986084
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232110619
+      }
+    ],
+    "8.1 Write `src/decay/score.ts` — `score(input: ScoreInput): ScoredEngram[]`. (1) Validate config via `validateConfig`. (2) Build `Map<id, EngramState>` from `states`; synthesize default for missing. (3) Apply `ledger` events in order via `reinforce` matching: glob match on `filesTouched` (minimatch-compatible), exact id match, or `specLinks` match on `cited`. (4) For each engram compute `computeWeight`, `computeDeltaC`, `computeRetention`, apply floor. (5) Assign tier: `≥ hotMin` → `\"hot\"`, `≥ cryptMax` → `\"warm\"`, else `\"crypt\"`. (6) Return sorted by `(tier-rank, -retention, id)`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821677805
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232218711
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232391712
+      }
+    ],
+    "8.2 Write `test/arbitraries/workspace.arb.ts` — arbitrary complete score inputs: `{ engrams, states, specs, ledger, nowCommit, nowISO, cfg }`. Include all-spec-linked variant (every engram has ≥ 1 active specLink), empty-engrams variant, mixed protected/unprotected.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821677923
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232397268
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232596522
+      }
+    ],
+    "8.3 Write `src/properties/p9-determinism.ts` — P9: `FOR ALL` valid score inputs, calling `score(input)` twice returns arrays where every field of every `ScoredEngram` is structurally identical (string fields byte-equal, floats equal within same engine). Export `p9Determinism(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821678109
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232398669
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232596628
+      }
+    ],
+    "8.4 Write `src/properties/p10-partition.ts` — P10: `FOR ALL` valid score inputs, the output array's `tier` values form a partition of `{\"hot\",\"warm\",\"crypt\"}` — every engram is in exactly one tier and the three subsets cover the entire array. Export `p10Partition(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821678340
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232399463
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232596701
+      }
+    ],
+    "9. Checkpoint — Decay Engine complete": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821678458
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232695212
+      }
+    ],
+    "10.1 Write `src/contradiction/default-ontology.ts` — `DEFAULT_AXES: Axis[]` with exactly 12 axes: `state-management`, `css-approach`, `framework`, `package-manager`, `test-runner`, `module-system`, `error-handling`, `typing-strictness`, `component-model`, `data-fetching`, `naming-convention`, `file-size-policy`. Each axis has ≥ 2 stances with realistic pattern strings and `negationAware` flags.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821678584
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232755733
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232954149
+      }
+    ],
+    "10.2 Write `src/contradiction/validate-ontology.ts` — `validateOntology(axes: readonly Axis[]): Result<CompiledOntology, LetheError>`. Attempts `new RegExp(pattern)` for every pattern in every stance; returns `ONTOLOGY_INVALID_PATTERN` on first failure with `{ axis, stance, pattern }` in detail. All patterns validated before any scanning.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821678707
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232954336
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233059079
+      }
+    ],
+    "10.3 Write `src/contradiction/scan.ts` — `scanEngram(body: string, compiled: CompiledOntology): readonly StanceMatch[]`. Truncate body to 8,192 chars first (ReDoS protection). Split into sentences at `.`, `!`, `?`, or newline. Per sentence per stance: check compiled patterns. If `negationAware`, scan 4-token lookbehind for negation words (`do not`, `never`, `avoid`, `no`, `instead of`). Polarity `+` when match and no negation; `-` when match and negation present.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821678828
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233060851
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233211586
+      }
+    ],
+    "10.4 Write `src/contradiction/resolve.ts` — `resolveContradiction(a: ScoredEngram, b: ScoredEngram, axisId: string): ContradictionReport`. Priority order: (1) protected > unprotected → `reason: \"spec\"`; (2) higher `retention` → `reason: \"retention\"`; (3) higher `lastReinforcedCommit` → `reason: \"recency\"`; (4) lex-smaller `id` → `reason: \"id\"`. Both protected → `{ kind: \"unresolvable\", reason: \"both-protected\" }`. Severity: `\"high\"` if either protected; `\"medium\"` if both Hot; `\"low\"` otherwise. Lower `id` → `a` field in report.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821678945
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232954771
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233059460
+      }
+    ],
+    "10.5 Write `src/contradiction/detect.ts` — `detectContradictions(scored: readonly ScoredEngram[], specs: readonly SpecInvariant[], ontology?: Ontology): Result<readonly ContradictionReport[], LetheError>`. Merge user ontology into `DEFAULT_AXES` (replace matching ids, append new). Validate merged ontology. Scan all engram bodies. For each axis collect `(+stance, engramId)` pairs; emit one report per conflicting `(+A,+B where A≠B)` or `(+A,-A)` pair. Deduplicate. Sort by `(axis, a.id, b.id)`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821679091
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233213268
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233423733
+      }
+    ],
+    "11.1 Write `src/properties/p11-symmetric.ts` — P11: `FOR ALL` two `ScoredEngram` values `a` and `b`, `detectContradictions([a,b], specs)` and `detectContradictions([b,a], specs)` produce the same set of reports (same `axis`, same `a`/`b` assignment, same `resolution`). Export `p11Symmetric(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821679221
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233426311
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233596200
+      }
+    ],
+    "11.2 Write `src/properties/p5-contradiction.ts` — P5: `FOR ALL` workspace, after `applyPlan`, for every `ContradictionReport` in `detectContradictions(resultScored)`, the resolution is either `\"unresolvable\"` or the losing engram is no longer in Hot or Warm tier. Export `p5Contradiction(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821679342
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233427726
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233596318
+      }
+    ],
+    "12.1 Write `src/consolidate/jaccard.ts` — `jaccard(bodyA: string, bodyB: string): number`. Tokenize by lowercasing, stripping `[^\\w\\s]`, splitting on whitespace, filtering empty. Form `Set<string>` for each. Return `|intersection| / |union|`. Return `0` when both sets empty.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821679463
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233613053
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233776386
+      }
+    ],
+    "12.2 Write `src/consolidate/dedupe.ts` — `findDuplicates(scored: readonly ScoredEngram[], cfg: LetheConfig): readonly DupePair[]`. O(n²) scan over non-protected engrams. Collect pairs with `jaccard ≥ cfg.dedupeJaccard`. Sort descending by similarity. Greedy resolution: higher `retention` kept (ties: lex-smaller `id`). A previously kept engram may be dropped in a later resolution (transitivity).": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821679593
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233778374
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234043609
+      }
+    ],
+    "12.3 Write `src/consolidate/budget.ts` — `computeBudget(scored: readonly ScoredEngram[], toArchive: ReadonlySet<string>, cfg: LetheConfig): BudgetAnalysis`. Count Hot tokens excluding archived ids. If protected-hot tokens alone exceed budget → `{ status: \"budget_infeasible\", demotion: [] }`. Otherwise sort non-protected Hot by `retention` ascending, accumulate into `demotion[]` until budget satisfied.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821679713
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233779008
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234043874
+      }
+    ],
+    "12.4 Write `src/consolidate/plan.ts` — `planConsolidation(scored: readonly ScoredEngram[], reports: readonly ContradictionReport[], cfg: LetheConfig): ConsolidationPlan`. Pure dry-run — no mutations. (1) Collect `toArchive`: non-protected with `retention < cfg.cryptMax` OR `status === \"defeated\"`. (2) Collect `toMerge` from `findDuplicates`. (3) Compute budget with `computeBudget`. (4) Return `ConsolidationPlan` with `toArchive`, `toMerge`, `toDemote`, `budgetStatus`, `tokensBefore`, `tokensAfter`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821679833
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234044231
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234242080
+      }
+    ],
+    "13. Checkpoint — Consolidation Engine complete": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821679953
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234242844
+      }
+    ],
+    "14.1 Write `src/crypt/archive.ts` — `toTombstone(scored: ScoredEngram, reason: TombstoneRecord[\"reason\"], nowCommit: number, nowISO: string, index: number, neighborBefore?: string): TombstoneRecord`. Builds `schema: 1` record with byte-exact `body` from `scored.node.body`, `meta` from node fields, full `state` at archival time, `retentionAtDeath`, `buriedAtCommit`, `buriedAt`, `position`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821680096
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234307469
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234446206
+      }
+    ],
+    "14.2 Write `src/crypt/apply.ts` — `applyPlan(workspace: VirtualWorkspace, plan: ConsolidationPlan, nowCommit: number, nowISO: string): { workspace: VirtualWorkspace; tombstones: readonly TombstoneRecord[] }`. For each entry in `plan.toArchive` and `plan.toMerge` drops: remove engram text from file using `span` offsets, compute `index` and `neighborBefore` from pre-apply engram list, call `toTombstone`. Return new immutable `VirtualWorkspace` with updated files and extended tombstone list.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821680225
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234447683
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234847590
+      }
+    ],
+    "14.3 Write `src/crypt/resurrect.ts` — `resurrect(workspace: VirtualWorkspace, tomb: TombstoneRecord, nowCommit: number, nowISO: string, cfg: LetheConfig): Result<VirtualWorkspace, LetheError>`. Find tombstone by `tomb.id`; return `TOMBSTONE_NOT_FOUND` if absent. Parse target file to get current engram list. If `tomb.position.index ≤ currentEngrams.length`: insert at index. Else: append under `## Resurrected` heading. Remove tombstone from list. Return updated workspace.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821680342
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234847831
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235098649
+      }
+    ],
+    "15.1 Write `test/arbitraries/adversarial.arb.ts` — adversarial arbitraries: all-spec-linked workspace (every engram has ≥ 1 active `specLink`), duplicate-id collision documents (two sections produce identical slug), unicode+CRLF bodies (CJK, Arabic, Hebrew, combining diacritics, zero-width spaces, mixed CRLF/LF), empty engram sets, bursty ledger (≥ 20 events in `Δc ≤ 5`), long-idle gaps (`Δc ≥ 500` with no reinforcement).": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821680467
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235099733
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235798628
+      }
+    ],
+    "15.2 Update `src/properties/p4-protected.ts` — wire to real `planConsolidation`. No-op if already correct from stub; verify property still passes end-to-end.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821680588
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235798555
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237045773
+      }
+    ],
+    "15.3 Write `src/properties/p6-budget.ts` — P6: `FOR ALL` workspace and config, after `planConsolidation` + `applyPlan`, either Hot-tier token total ≤ `cfg.budgetTokens`, or `budgetStatus === \"budget_infeasible\"` and every protected engram that was Hot before remains Hot after. Export `p6Budget(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821680711
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235798929
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237045539
+      }
+    ],
+    "15.4 Write `src/properties/p7-roundtrip.ts` — P7: `FOR ALL` engram `e` archived via `applyPlan`, `resurrect(resultWorkspace, tomb).value.node` deep-equals `e.node` (all nine fields listed in REQ-CRY-6). Export `p7Roundtrip(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821680841
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235800234
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237045632
+      }
+    ],
+    "15.5 Write `src/properties/p8-idempotent.ts` — P8: `FOR ALL` workspace `w`, `planConsolidation(score(applyPlan(w, planConsolidation(score(w))).workspace))` returns a plan with empty `toArchive`, `toMerge`, `toDemote` arrays. Export `p8Idempotent(cfg: LetheConfig): fc.IProperty<...>`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821680981
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235801113
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237045703
+      }
+    ],
+    "16. Checkpoint — Crypt and all PBTs green": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821681107
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237209532
+      }
+    ],
+    "17.1 Write `src/properties/index.ts` — re-exports all 12 property functions (`p1Range` through `p12Serialize`). Defines `PbtGateResult` type and `runPbtGate(cfg: LetheConfig): Promise<PbtGateResult>`. Runs all 12 properties sequentially via `fc.assert` with 100 iterations each; returns on first failure with `{ status: \"failed\", propertyId, seed, counterexample }`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821681233
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237218447
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238095337
+      }
+    ],
+    "17.2 Write `src/fixtures/haunted-repo.ts` — `generateHauntedRepo(seed: number, cfg: LetheConfig): VirtualWorkspace`. Uses seeded LCG (`state = (1664525 * state + 1013904223) % 2^32`) — never `Math.random()`. Produces: ~45 engrams across 6 steering files, 3 active `SpecInvariant` objects, ≥ 3 contradiction pairs (opposing `css-approach`, `module-system`, `error-handling` stances baked in), ≥ 6 stale engrams (`R < 0.25` via old `lastReinforcedCommit`), ≥ 2 near-duplicate pairs (Jaccard ≥ 0.85), 60-day/150-commit history baked into `LedgerEvent[]`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821681360
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237219730
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238095550
+      }
+    ],
+    "18.1 Write `src/index.ts` — named re-exports of all public types and functions: `parseDocument`, `serializeDocument`, `score`, `reinforce`, `detectContradictions`, `planConsolidation`, `applyPlan`, `resurrect`, `DEFAULT_CONFIG`, `validateConfig`, `generateHauntedRepo`, `runPbtGate`, and all types from `types.ts`.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821681501
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238096224
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238551879
+      }
+    ],
+    "18.4 Write a performance benchmark (as a `bench` or timed test in `test/decay.unit.test.ts`): generate 500 `EngramNode` objects with 500 corresponding `EngramState` entries and a 500-event `LedgerEvent[]`, call `score(...)` in a warm process (run once before timing), measure with `performance.now()`, assert elapsed < 50 ms.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793821681712
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238097546
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238551978
+      }
+    ],
+    "1. Foundation — Types, Result, Config": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793822799159
+      }
+    ],
+    "2. SHA-256 and Slug": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793828683035
+      }
+    ],
+    "2.3 Write unit tests in `test/parse.unit.test.ts` covering: known SHA-256 vectors (empty string, \"abc\", multi-block input), CRLF normalization changes the hash vs LF-only, unicode input (CJK, Arabic), slug stability (body change → hash change but id unchanged), empty headingPath, special characters in heading text.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793828724412
+      }
+    ],
+    "1.4 Run `bun run typecheck` — zero errors required before proceeding. Fix any issues.": [
+      {
+        "executionId": "47a6a8c0-9506-4e26-99e7-efb26cd3ac3f",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1793828728936
+      }
+    ],
+    "3. Parser — Frontmatter, Section Split, Annotation": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231061253
+      }
+    ],
+    "4.2 Expand `test/parse.unit.test.ts` with: round-trip test for a real vault-style file (H2/H3 headings + frontmatter), duplicate id detection returns `PARSE_DUPLICATE_ID`, empty document success with zero engrams, frontmatter is preserved byte-for-byte in serialization, token count matches `Math.ceil(body.length / 4)` for known inputs.": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231214811
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231557481
+      }
+    ],
+    "3.4 Expand `test/parse.unit.test.ts` with: frontmatter with CRLF line endings, frontmatter with duplicate closing `---` (should parse only the first), H3 nested inside H2 heading stack, bullet with nested sub-lists spanning multiple lines, annotation with all keys present, annotation with only `pin=true`, annotation with unknown keys, empty body annotation.": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231558459
+      }
+    ],
+    "4.5 Write `test/parse.pbt.test.ts` — vitest test file importing `p12Serialize`. Reads `FC_NUM_RUNS` from env (default 100). Runs `fc.assert(p12Serialize(DEFAULT_CONFIG), { numRuns, seed: ... })`. Print seed on failure.": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231727930
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231847866
+      }
+    ],
+    "4. Document Parser + P12 Serialize Round-Trip PBT": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231728085
+      }
+    ],
+    "6. Decay Engine — Delta, Retention, Weight, Reinforce": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231852352
+      }
+    ],
+    "6.5 Write unit tests in `test/decay.unit.test.ts`: known `R` value for `deltaC=10, S=5, W=1` (verify with formula), floor application for pinned engram, `W=4` for spec-linked, stability capped at `sMax` on reinforce, `sMin` clamping, alpha=0.25 default, reinforcement timestamp update, `Δc=0` → `R=1.0`.": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231861918
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794231968549
+      }
+    ],
+    "7.7 Write `test/decay.pbt.test.ts` — runs P1, P2, P3, P4 with `FC_NUM_RUNS` count. Reads env var; defaults to 100. Print seed on any failure. All four must pass.": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232110725
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232218630
+      }
+    ],
+    "7. P1–P4 Decay PBTs": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232218762
+      }
+    ],
+    "8.5 Expand `test/decay.pbt.test.ts` to include P9 and P10. All six decay PBTs (P1–P4, P9, P10) must pass.": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232596779
+      },
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232694615
+      }
+    ],
+    "8. `score` Function": [
+      {
+        "executionId": "22ce49ab-134f-4c21-b32c-883cb2f8cd70",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794232596828
+      }
+    ],
+    "10. Contradiction Detector": [
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233423950
+      }
+    ],
+    "10.6 Write unit tests in `test/contradiction.unit.test.ts`: no-contradiction case returns empty array, two opposing `css-approach` stances detected, negated stance produces `-` polarity, both-protected pair → `unresolvable`, resolution priority tested for each of the 4 tiebreaker levels, invalid regex pattern → `ONTOLOGY_INVALID_PATTERN`, custom ontology axis replaces default, custom ontology adds new axis, output sorted by `(axis, a.id, b.id)`.": [
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233425841
+      }
+    ],
+    "11. P5 and P11 Contradiction PBTs": [
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233596404
+      }
+    ],
+    "11.3 Write `test/contradiction.pbt.test.ts` — runs P11 and P5 with `FC_NUM_RUNS` count. Both must pass. Print seed on failure.": [
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233597131
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794233691861
+      }
+    ],
+    "12.5 Write unit tests in `test/consolidate.unit.test.ts`: decayed engram (`R < cryptMax`) → archived; defeated engram → archived; protected engram with `R < cryptMax` → NOT archived; budget demotion selects lowest-retention first; `budget_infeasible` when protected Hot tokens alone exceed `budgetTokens`; known Jaccard pairs (identical bodies → 1.0, disjoint bodies → 0.0); greedy dedup with transitive chain; idempotency on already-consolidated input.": [
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234242322
+      }
+    ],
+    "12. Consolidation Engine": [
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234242429
+      },
+      {
+        "executionId": "a81f7239-3c10-4fc3-8e6a-674ff3270b4c",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794234242543
+      }
+    ],
+    "14.4 Write unit tests in `test/crypt.unit.test.ts`: round-trip body byte-equality after archive+resurrect, insert at index 0, insert at middle index, insert past end → fallback to `## Resurrected`, `TOMBSTONE_NOT_FOUND` when id absent from tombstone list, `stability` resets to `cfg.s0` after resurrection, `neighborBefore` correctly identifies preceding engram id.": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235098800
+      }
+    ],
+    "14. Crypt — Archive, Apply, Resurrect": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794235098940
+      }
+    ],
+    "15.6 Write `test/consolidate.pbt.test.ts` — runs P4 (full), P6, P8 with `FC_NUM_RUNS` count. All must pass.": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237063101
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237209336
+      }
+    ],
+    "15.7 Write `test/crypt.pbt.test.ts` — runs P7 with `FC_NUM_RUNS` count. Must pass. Print seed on failure.": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237063382
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237209600
+      }
+    ],
+    "15. P4 (full), P6, P7, P8 Consolidation/Crypt PBTs": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237209469
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794237209668
+      }
+    ],
+    "17. `runPbtGate` and Fixtures": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238095588
+      }
+    ],
+    "18.2 Run `bun run typecheck` — zero type errors, zero uses of `any`. Verify compiler flags active: `strict: true`, `noUncheckedIndexedAccess: true`, `exactOptionalPropertyTypes: true`, `noImplicitOverride: true`.": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238552148
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238942197
+      }
+    ],
+    "18.3 Run `bun test` with `FC_NUM_RUNS=100` — all unit tests and all PBT tests pass. Confirm each of the 12 properties is exercised.": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238942341
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794239652179
+      }
+    ],
+    "18. Barrel, TypeCheck, and Performance Gate": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794238942377
+      }
+    ],
+    "18.5 Append one line to `.kiro/steering/06-memory.md` changelog: `- <date> · phase 1 · spec · lethe-core tasks.md created + all milestones green · Refs: REQ-PAR-1, REQ-DEC-1, REQ-CON-1, REQ-CRY-1, REQ-PBT-1 · commit <sha7>`.": [
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794239652261
+      },
+      {
+        "executionId": "ed51e4d7-6ee1-4991-b7ec-54f7a4f4523a",
+        "chatSessionId": "sess_a007363e-60f9-4140-89f5-5f577eeba48e",
+        "timestamp": 1794240239028
+      }
+    ]
+  }
+}
