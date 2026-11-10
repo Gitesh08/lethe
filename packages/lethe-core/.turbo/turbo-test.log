@@ -9,76 +9,85 @@
 
 [1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90mD:/Projects/kiroween/lethe/packages/lethe-core[39m
 
- [32m✓[39m test/boundary.unit.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 87[2mms[22m[39m
- [32m✓[39m test/resolve.unit.test.ts [2m([22m[2m9 tests[22m[2m)[22m[90m 10[2mms[22m[39m
- [32m✓[39m test/budget.unit.test.ts [2m([22m[2m13 tests[22m[2m)[22m[90m 12[2mms[22m[39m
- [32m✓[39m test/archive.unit.test.ts [2m([22m[2m18 tests[22m[2m)[22m[90m 9[2mms[22m[39m
- [32m✓[39m test/plan.unit.test.ts [2m([22m[2m16 tests[22m[2m)[22m[90m 14[2mms[22m[39m
- [32m✓[39m test/dedupe-equivalence.unit.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 43[2mms[22m[39m
- [32m✓[39m test/dedupe.unit.test.ts [2m([22m[2m12 tests[22m[2m)[22m[90m 43[2mms[22m[39m
- [32m✓[39m test/ontology.unit.test.ts [2m([22m[2m55 tests[22m[2m)[22m[90m 16[2mms[22m[39m
- [32m✓[39m test/decay.unit.test.ts [2m([22m[2m23 tests[22m[2m)[22m[90m 14[2mms[22m[39m
- [32m✓[39m test/validate-ontology.unit.test.ts [2m([22m[2m16 tests[22m[2m)[22m[90m 18[2mms[22m[39m
- [32m✓[39m test/score.unit.test.ts [2m([22m[2m13 tests[22m[2m)[22m[90m 16[2mms[22m[39m
- [32m✓[39m test/detect.unit.test.ts [2m([22m[2m18 tests[22m[2m)[22m[90m 27[2mms[22m[39m
- [32m✓[39m test/apply.unit.test.ts [2m([22m[2m15 tests[22m[2m)[22m[90m 45[2mms[22m[39m
- [32m✓[39m test/parse.unit.test.ts [2m([22m[2m36 tests[22m[2m)[22m[90m 56[2mms[22m[39m
- [32m✓[39m test/pipeline.unit.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 36[2mms[22m[39m
- [32m✓[39m test/jaccard.unit.test.ts [2m([22m[2m14 tests[22m[2m)[22m[90m 27[2mms[22m[39m
- [32m✓[39m test/scan.unit.test.ts [2m([22m[2m11 tests[22m[2m)[22m[90m 17[2mms[22m[39m
+ [32m✓[39m test/budget.unit.test.ts [2m([22m[2m13 tests[22m[2m)[22m[90m 18[2mms[22m[39m
+ [32m✓[39m test/plan.unit.test.ts [2m([22m[2m16 tests[22m[2m)[22m[90m 28[2mms[22m[39m
+ [32m✓[39m test/dedupe.unit.test.ts [2m([22m[2m12 tests[22m[2m)[22m[90m 49[2mms[22m[39m
+ [32m✓[39m test/dedupe-equivalence.unit.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 75[2mms[22m[39m
+ [32m✓[39m test/boundary.unit.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 117[2mms[22m[39m
+ [32m✓[39m test/decay.unit.test.ts [2m([22m[2m23 tests[22m[2m)[22m[90m 12[2mms[22m[39m
+ [32m✓[39m test/score.unit.test.ts [2m([22m[2m13 tests[22m[2m)[22m[90m 17[2mms[22m[39m
+ [32m✓[39m test/ontology.unit.test.ts [2m([22m[2m55 tests[22m[2m)[22m[90m 32[2mms[22m[39m
+ [32m✓[39m test/archive.unit.test.ts [2m([22m[2m18 tests[22m[2m)[22m[90m 16[2mms[22m[39m
+ [32m✓[39m test/validate-ontology.unit.test.ts [2m([22m[2m16 tests[22m[2m)[22m[90m 21[2mms[22m[39m
+ [32m✓[39m test/detect.unit.test.ts [2m([22m[2m18 tests[22m[2m)[22m[90m 35[2mms[22m[39m
+ [32m✓[39m test/parse.unit.test.ts [2m([22m[2m36 tests[22m[2m)[22m[90m 53[2mms[22m[39m
+ [32m✓[39m test/apply.unit.test.ts [2m([22m[2m15 tests[22m[2m)[22m[90m 53[2mms[22m[39m
+ [32m✓[39m test/pipeline.unit.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 59[2mms[22m[39m
+ [32m✓[39m test/spec-stances.unit.test.ts [2m([22m[2m13 tests[22m[2m)[22m[90m 192[2mms[22m[39m
+ [32m✓[39m test/resolve.unit.test.ts [2m([22m[2m9 tests[22m[2m)[22m[90m 11[2mms[22m[39m
+ [32m✓[39m test/jaccard.unit.test.ts [2m([22m[2m14 tests[22m[2m)[22m[90m 32[2mms[22m[39m
+ [32m✓[39m test/scan.unit.test.ts [2m([22m[2m11 tests[22m[2m)[22m[90m 19[2mms[22m[39m
  [32m✓[39m test/resurrect.unit.test.ts [2m([22m[2m35 tests[22m[2m)[22m[90m 43[2mms[22m[39m
- [32m✓[39m test/size-limits.unit.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 31[2mms[22m[39m
+ [32m✓[39m test/size-limits.unit.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 34[2mms[22m[39m
 [90mstdout[2m | test/code-rules.unit.test.ts[2m > [22m[2mtsconfig-independent code rules over src/[2m > [22m[2mhas no @ts-ignore/@ts-nocheck and justified @ts-expect-error only
 [22m[39m@ts-expect-error count in src: 0
 
 [90mstdout[2m | test/code-rules.unit.test.ts[2m > [22m[2mtsconfig-independent code rules over src/[2m > [22m[2mreports switches without a default
 [22m[39mswitches without default (3): fixtures/haunted-states.ts:47, properties/arbitraries/adversarial-assemble.arb.ts:66, properties/json-safe.ts:41
 
- [32m✓[39m test/code-rules.unit.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 323[2mms[22m[39m
- [32m✓[39m test/public-api.unit.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 20[2mms[22m[39m
+ [32m✓[39m test/code-rules.unit.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 500[2mms[22m[39m
+   [33m[2m✓[22m[39m tsconfig-independent code rules over src/[2m > [22mkeeps every function body <= 40 lines and complexity <= 10 [33m369[2mms[22m[39m
+ [32m✓[39m test/public-api.unit.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 26[2mms[22m[39m
  [32m✓[39m test/smoke.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 3[2mms[22m[39m
- [32m✓[39m test/parse.pbt.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 82[2mms[22m[39m
- [32m✓[39m test/tsconfig.unit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 5[2mms[22m[39m
- [32m✓[39m test/gate.unit.test.ts [2m([22m[2m8 tests[22m[2m)[22m[90m 195[2mms[22m[39m
- [32m✓[39m test/haunted-repo.unit.test.ts [2m([22m[2m24 tests[22m[2m)[22m[33m 423[2mms[22m[39m
+ [32m✓[39m test/pipeline-ontology.unit.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 102[2mms[22m[39m
+ [32m✓[39m test/parse.pbt.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 119[2mms[22m[39m
+ [32m✓[39m test/tsconfig.unit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 6[2mms[22m[39m
+ [32m✓[39m test/gate.unit.test.ts [2m([22m[2m8 tests[22m[2m)[22m[90m 297[2mms[22m[39m
 [90mstdout[2m | test/adversarial.arb.sanity.test.ts[2m > [22m[2madversarial arbitraries[2m > [22m[2mworkspaceInputArb: plans archive something in >= 5% of samples (non-vacuity)
-[22m[39m[non-vacuity] archive=90% merge=6% contradictionReports=58% contradictionLosers=56% protectedButDecayed=67%
+[22m[39m[non-vacuity] archive=88% merge=10% contradictionReports=64% contradictionLosers=63% protectedButDecayed=59%
 
 [90mstdout[2m | test/adversarial.arb.sanity.test.ts[2m > [22m[2madversarial arbitraries[2m > [22m[2manyWorkspaceInputArb: also archives in >= 5% of samples and never fails config checks
-[22m[39m[non-vacuity] anyWorkspaceInputArb archive=75%
+[22m[39m[non-vacuity] anyWorkspaceInputArb archive=73%
 
 [90mstdout[2m | test/adversarial.arb.sanity.test.ts[2m > [22m[2madversarial arbitraries[2m > [22m[2mduplicateIdWorkspaceArb: produces PARSE_DUPLICATE_ID parse errors
 [22m[39m[duplicateId] samples with PARSE_DUPLICATE_ID=100%
 
- [32m✓[39m test/adversarial.arb.sanity.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 669[2mms[22m[39m
- [32m✓[39m test/decay.pbt.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 465[2mms[22m[39m
- [32m✓[39m test/crypt.pbt.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 560[2mms[22m[39m
-   [33m[2m✓[22m[39m P7 resurrect(archive(e)) deep-equals e[2m > [22mholds for DEFAULT_CONFIG (section granularity) [33m333[2mms[22m[39m
- [32m✓[39m test/contradiction.pbt.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 517[2mms[22m[39m
- [32m✓[39m test/consolidate.pbt.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 869[2mms[22m[39m
+ [32m✓[39m test/adversarial.arb.sanity.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 1070[2mms[22m[39m
+   [33m[2m✓[22m[39m adversarial arbitraries[2m > [22mworkspaceInputArb: plans archive something in >= 5% of samples (non-vacuity) [33m430[2mms[22m[39m
+ [32m✓[39m test/haunted-repo.unit.test.ts [2m([22m[2m24 tests[22m[2m)[22m[33m 646[2mms[22m[39m
+ [32m✓[39m test/decay.pbt.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 764[2mms[22m[39m
+   [33m[2m✓[22m[39m P4 protected engrams keep R >= specFloor (decay half)[2m > [22mholds for DEFAULT_CONFIG [33m365[2mms[22m[39m
+ [32m✓[39m test/contradiction.pbt.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 789[2mms[22m[39m
+   [33m[2m✓[22m[39m P5 no contradicting pair coexists (defect + end-to-end)[2m > [22mholds for DEFAULT_CONFIG [33m321[2mms[22m[39m
+ [32m✓[39m test/crypt.pbt.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 854[2mms[22m[39m
+   [33m[2m✓[22m[39m P7 resurrect(archive(e)) deep-equals e[2m > [22mholds for DEFAULT_CONFIG (section granularity) [33m494[2mms[22m[39m
+   [33m[2m✓[22m[39m P7 resurrect(archive(e)) deep-equals e[2m > [22mholds when more engrams are buried (cryptMax 0.5, hotMin 0.9) [33m306[2mms[22m[39m
+ [32m✓[39m test/consolidate.pbt.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 1492[2mms[22m[39m
+   [33m[2m✓[22m[39m P4 protected engrams are never archived[2m > [22mholds for DEFAULT_CONFIG (decay + end-to-end) [33m384[2mms[22m[39m
+   [33m[2m✓[22m[39m P8 consolidation is idempotent[2m > [22mholds for DEFAULT_CONFIG [33m352[2mms[22m[39m
 [90mstdout[2m | test/pbt-coverage.unit.test.ts[2m > [22m[2mevery property really executes numRuns() cases[2m > [22m[2mreports numRuns, numSkips and timing per property
 [22m[39mFC_NUM_RUNS=(unset) requested=100
 id	numRuns	numSkips	ms
-P1	100	0	12
+P1	100	0	14
 P2	100	0	12
-P3	100	0	9
-P4	100	0	237
-P5	100	0	207
-P6	100	0	101
-P7	100	0	172
-P8	100	0	178
-P9	100	0	50
-P10	100	0	15
-P11	100	0	29
-P12	100	0	8
+P3	100	0	12
+P4	100	0	322
+P5	100	0	270
+P6	100	0	151
+P7	100	0	315
+P8	100	0	418
+P9	100	0	97
+P10	100	0	32
+P11	100	0	49
+P12	100	0	14
 
- [32m✓[39m test/pbt-coverage.unit.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 1041[2mms[22m[39m
-   [33m[2m✓[22m[39m every property really executes numRuns() cases[2m > [22mreports numRuns, numSkips and timing per property [33m1030[2mms[22m[39m
+ [32m✓[39m test/pbt-coverage.unit.test.ts [2m([22m[2m4 tests[22m[2m)[22m[33m 1723[2mms[22m[39m
+   [33m[2m✓[22m[39m every property really executes numRuns() cases[2m > [22mreports numRuns, numSkips and timing per property [33m1710[2mms[22m[39m
 
-[2m Test Files [22m [1m[32m32 passed[39m[22m[90m (32)[39m
-[2m      Tests [22m [1m[32m405 passed[39m[22m[90m (405)[39m
-[2m   Start at [22m 21:33:00
-[2m   Duration [22m 3.09s[2m (transform 7.03s, setup 0ms, collect 18.98s, tests 5.74s, environment 11ms, prepare 4.85s)[22m
+[2m Test Files [22m [1m[32m34 passed[39m[22m[90m (34)[39m
+[2m      Tests [22m [1m[32m423 passed[39m[22m[90m (423)[39m
+[2m   Start at [22m 20:21:01
+[2m   Duration [22m 4.85s[2m (transform 9.91s, setup 0ms, collect 27.54s, tests 9.31s, environment 12ms, prepare 8.48s)[22m
 
 
 > @lethe/core@0.1.0 test:perf
@@ -88,26 +97,58 @@ P12	100	0	8
 [1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90mD:/Projects/kiroween/lethe/packages/lethe-core[39m
 
 [90mstdout[2m | test/score.perf.test.ts[2m > [22m[2mNFR-1 performance (500 engrams)[2m > [22m[2mscore() of 500 engrams with a 500-event ledger has median < 50 ms
-[22m[39m[perf] score(500 engrams, 500 events) median of 15: 25.02 ms
+[22m[39m[perf] score(500 engrams, 500 events) median of 15: 41.34 ms
 
 [90mstdout[2m | test/score.perf.test.ts[2m > [22m[2mNFR-1 performance (500 engrams)[2m > [22m[2mdetectContradictions on 500 engrams has median < 300 ms
-[22m[39m[perf] detectContradictions(500) median of 5: 25.67 ms
+[22m[39m[perf] detectContradictions(500) median of 5: 46.80 ms
 
 [90mstdout[2m | test/score.perf.test.ts[2m > [22m[2mNFR-1 performance (500 engrams)[2m > [22m[2mfindDuplicates on 500 engrams has median < 150 ms
-[22m[39m[perf] findDuplicates(500) median of 5: 28.36 ms
+[22m[39m[perf] findDuplicates(500) median of 5: 48.75 ms
 
 [90mstdout[2m | test/score.perf.test.ts[2m > [22m[2mNFR-1 performance (500 engrams)[2m > [22m[2mrunConsolidation on a 500-engram, 2-file workspace has median < 500 ms
-[22m[39m[perf] runConsolidation(500 engrams, 2 files) median of 5: 240.50 ms
+[22m[39m[perf] runConsolidation(500 engrams, 2 files) median of 5: 840.88 ms
 
- [32m✓[39m test/score.perf.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 2721[2mms[22m[39m
-   [33m[2m✓[22m[39m NFR-1 performance (500 engrams)[2m > [22mscore() of 500 engrams with a 500-event ledger has median < 50 ms [33m468[2mms[22m[39m
-   [33m[2m✓[22m[39m NFR-1 performance (500 engrams)[2m > [22mrunConsolidation on a 500-engram, 2-file workspace has median < 500 ms [33m1674[2mms[22m[39m
- [32m✓[39m test/dedupe.perf.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 15[2mms[22m[39m
- [32m✓[39m test/ontology.perf.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 4[2mms[22m[39m
- [32m✓[39m test/jaccard.perf.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 4[2mms[22m[39m
+ [31m❯[39m test/score.perf.test.ts [2m([22m[2m5 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 6480[2mms[22m[39m
+   [33m[2m✓[22m[39m NFR-1 performance (500 engrams)[2m > [22mscore() of 500 engrams with a 500-event ledger has median < 50 ms [33m822[2mms[22m[39m
+   [33m[2m✓[22m[39m NFR-1 performance (500 engrams)[2m > [22mscore() equals the brute-force eventMatches + reinforce reference (bit-identical states) [33m357[2mms[22m[39m
+   [33m[2m✓[22m[39m NFR-1 performance (500 engrams)[2m > [22mdetectContradictions on 500 engrams has median < 300 ms [33m366[2mms[22m[39m
+   [33m[2m✓[22m[39m NFR-1 performance (500 engrams)[2m > [22mfindDuplicates on 500 engrams has median < 150 ms [33m321[2mms[22m[39m
+[31m   [31m×[31m NFR-1 performance (500 engrams)[2m > [22mrunConsolidation on a 500-engram, 2-file workspace has median < 500 ms[33m 4611[2mms[22m[31m[39m
+[31m     → expected 840.8751000000002 to be less than 500[39m
+ [32m✓[39m test/dedupe.perf.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 20[2mms[22m[39m
+ [32m✓[39m test/ontology.perf.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 6[2mms[22m[39m
+ [32m✓[39m test/jaccard.perf.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 7[2mms[22m[39m
 
-[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
-[2m      Tests [22m [1m[32m9 passed[39m[22m[90m (9)[39m
-[2m   Start at [22m 21:33:04
-[2m   Duration [22m 3.33s[2m (transform 185ms, setup 0ms, collect 326ms, tests 2.74s, environment 0ms, prepare 75ms)[22m
+[31m⎯⎯⎯⎯⎯⎯⎯[1m[7m Failed Tests 1 [27m[22m⎯⎯⎯⎯⎯⎯⎯[39m
 
+[31m[1m[7m FAIL [27m[22m[39m test/score.perf.test.ts[2m > [22mNFR-1 performance (500 engrams)[2m > [22mrunConsolidation on a 500-engram, 2-file workspace has median < 500 ms
+[31m[1mAssertionError[22m: expected 840.8751000000002 to be less than 500[39m
+[36m [2m❯[22m test/score.perf.test.ts:[2m213:17[22m[39m
+    [90m211| [39m    [35mconst[39m med [33m=[39m [34mbench[39m([34m5[39m[33m,[39m () [33m=>[39m [34mrunConsolidation[39m(pin))[33m;[39m
+    [90m212| [39m    console[33m.[39m[34minfo[39m([32m`[perf] runConsolidation(500 engrams, 2 files) median[39m…
+    [90m213| [39m    [34mexpect[39m(med)[33m.[39m[34mtoBeLessThan[39m([34m500[39m)[33m;[39m
+    [90m   | [39m                [31m^[39m
+    [90m214| [39m  })[33m;[39m
+    [90m215| [39m})[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m3 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m8 passed[39m[22m[90m (9)[39m
+[2m   Start at [22m 20:21:07
+[2m   Duration [22m 7.62s[2m (transform 328ms, setup 0ms, collect 706ms, tests 6.51s, environment 0ms, prepare 124ms)[22m
+
+npm error Lifecycle script `test:perf` failed with error:
+npm error code 1
+npm error path D:\Projects\kiroween\lethe\packages\lethe-core
+npm error workspace @lethe/core@0.1.0
+npm error location D:\Projects\kiroween\lethe\packages\lethe-core
+npm error command failed
+npm error command C:\Windows\system32\cmd.exe /d /s /c vitest run --no-file-parallelism --pool=forks --poolOptions.forks.singleFork "perf.test.ts"
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path D:\Projects\kiroween\lethe\packages\lethe-core
+npm error workspace @lethe/core@0.1.0
+npm error location D:\Projects\kiroween\lethe\packages\lethe-core
+npm error command failed
+npm error command C:\Windows\system32\cmd.exe /d /s /c npm run test:unit && npm run test:perf

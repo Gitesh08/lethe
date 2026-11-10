@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "lethe-check-on-save",
+      "description": "Check steering and specs for contradictions after a save; exit 1 reports them to the agent.",
+      "trigger": "PostFileSave",
+      "matcher": "\\.kiro[\\\\/](steering|specs)[\\\\/].*\\.md$",
+      "action": { "type": "command", "command": "node packages/lethe-mcp/dist/lethe.mjs check --workspace ." },
+      "timeout": 30
+    }
+  ]
+}

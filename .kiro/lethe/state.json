@@ -1,0 +1,558 @@
+{
+  "version": 1,
+  "commit": 1,
+  "at": "2026-11-10T20:07:32.924Z",
+  "ledger": {
+    "lines": 24,
+    "bytes": 300521,
+    "lastLineSha256": "3dc5d2ce0c752085f30aa345f0c501bd796caa4872be0a5959da6aa9b8795ca5"
+  },
+  "engrams": {
+    "kiro-steering-01-prd-md-1-executive-summary": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-10-success-metrics-demo-visible": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-11-submission-deliverables-checklist": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-2-problem": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-3-solution": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-4-target-judge-30-second-hook": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-5-non-goals": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-6-originality-constraint-hard-rule": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-1-engram-parser-req-par": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-2-decay-engine-req-dec": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-3-contradiction-detector-req-con": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-4-consolidation-crypt-req-cry": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-5-mcp-server-req-mcp": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-6-kiro-integration-req-hok": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-7-web-studio-req-web": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-8-judge-sandbox-mode-req-sbx": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-7-functional-requirements-ears-7-9-property-based-testing-req-pbt": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-8-non-functional-requirements": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-9-mcp-tool-specifications": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-9-mcp-tool-specifications-lethe-consolidate-sleep": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-9-mcp-tool-specifications-lethe-detect-contradictions": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-9-mcp-tool-specifications-lethe-resurrect-engram": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-01-prd-md-9-mcp-tool-specifications-lethe-score-memories": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-1-guiding-principles": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-10-browser-vs-local-execution-bridge": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-11-security-safety": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-12-testing-strategy": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-13-platform-assumptions-to-verify-phase-0": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-2-monorepo-layout": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-3-data-flow": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-3-data-flow-pipeline-one-scoring-pass": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-4-core-types-authoritative": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-5-core-function-surface-pure": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-6-conflict-ontology-contradiction-detection-deterministic": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-7-persistence-formats": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-7-persistence-formats-kiro-crypt-tombstones-json": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-7-persistence-formats-kiro-lethe-ledger-jsonl-append-only-one-json-per-line": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-7-persistence-formats-kiro-lethe-state-json": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-8-kiro-integration-architecture": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-8-kiro-integration-architecture-8-1-cli-contract-what-every-hook-calls": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-8-kiro-integration-architecture-8-2-ide-hooks-kiro-hooks": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-8-kiro-integration-architecture-8-3-kiro-crew-mapping-best-kiro-crew-app": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-02-architecture-md-9-web-architecture-apps-web": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-0-prime-directives": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-1-typescript": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-10-kiro-workflow-rules": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-11-quality-gates-definition-of-done": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-12-things-to-never-do": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-2-functional-purity-in-lethe-core": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-3-file-function-size": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-4-error-handling": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-5-mandatory-property-based-test-invariants": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-6-next-js-15-react-19-rules-apps-web": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-7-pure-css-architecture": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-8-mcp-server-rules-lethe-mcp": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-03-rules-md-9-git-commits-branching": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-1-principles": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-10-dock": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-11-motion-motion-framer-motion": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-12-iconography-glyphs": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-13-states-copy-tone": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-14-responsive-qa-checklist": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-2-tokens-styles-tokens-css": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-3-typography": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-4-color-contrast": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-5-bento-grid-single-viewport": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-6-tile-recipe-glass": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-7-spatial-canvas": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-7-spatial-canvas-react-flow-custom-node-engramcard": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-8-telemetry-tile": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-04-design-system-md-9-s-ance-tile-contradictions": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-05-phases-md-calendar-target-dates": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-05-phases-md-phase-0-ground-truth-setup-day-1-2": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-05-phases-md-phase-1-context-vault-monorepo-foundation-day-2-4": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-05-phases-md-phase-2-lethe-core-pbt-day-4-11": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-05-phases-md-phase-3-lethe-mcp-cli-hooks-crew-day-11-17": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-05-phases-md-phase-4-web-studio-sandbox-day-17-25": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-05-phases-md-phase-5-dogfood-demo-write-up-submission-day-25-31": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-05-phases-md-risk-register": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-active-spec-invariants-never-violate": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-changelog-newest-first-one-line-per-entry-max-25-lines-here": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-environment-notes": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-kiro-usage-insights-for-the-write-up": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-ledger-update-protocol-for-the-lethe-memory-ledger-hook": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-locked-decisions-adr-summary": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-open-questions": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-pbt-findings-the-best-write-up-material-log-every-one": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-project-snapshot": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-token-budget-targets": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    },
+    "kiro-steering-06-memory-md-verified-platform-facts-fill-during-phase-0-do-not-assume": {
+      "stability": 5,
+      "lastReinforcedCommit": 1,
+      "lastReinforcedAt": "2026-11-10T19:20:39.524Z",
+      "reinforcements": 0
+    }
+  }
+}

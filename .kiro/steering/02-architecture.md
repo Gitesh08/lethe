@@ -22,7 +22,7 @@ lethe/
 │  │  ├─ lethe-core/       # requirements.md design.md tasks.md
 │  │  ├─ lethe-mcp/
 │  │  └─ lethe-web-sandbox/
-│  ├─ hooks/               # *.kiro.hook (IDE hooks)
+│  ├─ hooks/               # *.json (v1 hooks)
 │  ├─ crypt/
 │  │  └─ tombstones.json   # cold store
 │  └─ lethe/
@@ -266,8 +266,12 @@ Honest limits: this is pattern-based, not semantic understanding. The ontology i
 
 ### `.kiro/lethe/state.json`
 ```json
-{ "version": 1, "commit": 148, "engrams": { "<id>": { "stability": 12.4, "lastReinforcedCommit": 131, "lastReinforcedAt": "2026-11-20T10:00:00Z", "reinforcements": 3 } } }
+{ "version": 1, "commit": 148, "at": "2026-11-20T10:00:00Z",
+  "ledger": { "lines": 12, "bytes": 1534, "lastLineSha256": "9f…" },
+  "engrams": { "<id>": { "stability": 12.4, "lastReinforcedCommit": 131, "lastReinforcedAt": "2026-11-20T10:00:00Z", "reinforcements": 3 } } }
 ```
+
+`state.json` is a checkpoint of post-replay states plus a ledger cursor (`lines`, `bytes`, `lastLineSha256`), so ledger events are folded exactly once (see lethe-mcp design, "State Model"). `lastLineSha256` is `null` when `lines` is 0.
 
 ### `.kiro/lethe/ledger.jsonl` (append-only, one JSON per line)
 ```json
@@ -297,12 +301,24 @@ lethe resurrect --workspace . --query "<id|text>" [--apply]
 
 ### 8.2 IDE hooks (`.kiro/hooks/`)
 
-| Hook | Trigger | Action |
+Verified Kiro v1 format: one file per hook at `.kiro/hooks/<name>.json`:
+
+```json
+{ "version": "v1", "hooks": [ { "name": "…", "trigger": "PostFileSave", "matcher": "<regex, optional>",
+  "action": { "type": "command", "command": "…" }, "timeout": 10, "enabled": true } ] }
+```
+
+`action.type` is `command` or `agent`; `matcher`, `timeout`, `enabled` are optional.
+
+| File | Trigger | Action |
 |---|---|---|
-| `lethe-check-on-save` | File saved matching `.kiro/steering/**/*.md`, `.kiro/specs/**/*.md` | `lethe check` → agent surfaces contradictions |
-| `lethe-record-on-task` | Agent turn / spec task completed | `lethe record --type task_passed --files $(git diff --name-only)` |
-| `lethe-sleep-manual` | Manual trigger | `lethe sleep` (dry-run), then prompt to apply |
-| `lethe-memory-ledger` | Spec task completed | Agent appends entry to `06-memory.md` changelog |
+| `lethe-check-on-save.json` | `PostFileSave` (steering/specs markdown) | `lethe check` → contradictions surfaced to the agent |
+| `lethe-record-on-task.json` | `PostTaskExec` | `lethe record --type task_passed` |
+| `lethe-probe.json` (disabled) | `PostFileSave`/`PostTaskExec` | `lethe probe` captures stdin payloads |
+
+On-demand sleep is the manually included steering file `.kiro/steering/lethe-sleep.md` (slash command `/lethe-sleep`), because new manual-trigger hooks cannot be created in v1. It runs a dry-run `lethe sleep`, then asks before applying.
+
+Exit codes for command hooks: 0 adds stdout to agent context; 2 blocks only `PreToolUse`, `UserPromptSubmit`, `PreTaskExec`; other non-zero is an error with stderr sent to the agent. The stdin payload fields for `PostFileSave` and `PostTaskExec` are unverified; capture them with `lethe probe`.
 
 ### 8.3 Kiro Crew mapping (Best Kiro Crew App)
 

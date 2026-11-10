@@ -18,6 +18,7 @@ import type {
   LedgerEvent,
   LetheConfig,
   LetheError,
+  Ontology,
   Result,
   ScoredEngram,
   SpecInvariant,
@@ -33,6 +34,8 @@ export interface PipelineInput {
   readonly nowCommit: number;
   readonly nowISO: string;
   readonly cfg: LetheConfig;
+  /** Optional user ontology merged over DEFAULT_AXES; absent => default axes only. */
+  readonly ontology?: Ontology;
 }
 
 export interface ScoredWorkspace {
@@ -99,7 +102,9 @@ export function scoreWorkspace(input: PipelineInput): ScoredWorkspace {
 export function runConsolidation(input: PipelineInput): Result<PipelineResult, LetheError> {
   const sw = scoreWorkspace(input);
   if (sw.configError !== undefined) return err(sw.configError);
-  const reports = detectContradictions(sw.scored, input.specs);
+  const reports = input.ontology === undefined
+    ? detectContradictions(sw.scored, input.specs)
+    : detectContradictions(sw.scored, input.specs, input.ontology);
   if (!reports.ok) return err(reports.error);
   const plan = planConsolidation(sw.scored, reports.value, input.cfg);
   const applied = applyPlan(input.workspace, plan, input.nowCommit, input.nowISO, input.cfg);

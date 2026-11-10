@@ -1,0 +1,21 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "lethe-probe-file-save",
+      "description": "Capture the PostFileSave stdin payload to .kiro/lethe/probe/ (verification only).",
+      "trigger": "PostFileSave",
+      "action": { "type": "command", "command": "node packages/lethe-mcp/dist/lethe.mjs probe --workspace ." },
+      "timeout": 30,
+      "enabled": false
+    },
+    {
+      "name": "lethe-probe-task-exec",
+      "description": "Capture the PostTaskExec stdin payload to .kiro/lethe/probe/ (verification only).",
+      "trigger": "PostTaskExec",
+      "action": { "type": "command", "command": "node packages/lethe-mcp/dist/lethe.mjs probe --workspace ." },
+      "timeout": 30,
+      "enabled": false
+    }
+  ]
+}

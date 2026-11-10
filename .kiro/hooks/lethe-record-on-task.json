@@ -1,0 +1,12 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "lethe-record-on-task",
+      "description": "Record a task_passed event (estimated utility) and start decay for newly adopted rules.",
+      "trigger": "PostTaskExec",
+      "action": { "type": "command", "command": "node packages/lethe-mcp/dist/lethe.mjs record --workspace . --type task_passed --files-from-git" },
+      "timeout": 30
+    }
+  ]
+}

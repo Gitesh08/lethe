@@ -1,0 +1,9 @@
+lethe probe
+  Capture a hook stdin payload to .kiro/lethe/probe/.
+
+Global options:
+  --workspace <path>   workspace root (default: current directory)
+  --json               print exactly one JSON envelope on stdout
+  --now <iso>          override the clock (ISO 8601 with Z or offset)
+  --commit <n>         override the commit counter
+  --help, --version

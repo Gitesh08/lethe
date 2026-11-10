@@ -1,0 +1,99 @@
+{
+  "globalOptions": [
+    "commit",
+    "json",
+    "now",
+    "workspace"
+  ],
+  "commands": {
+    "adopt": [
+      "apply"
+    ],
+    "check": [
+      "block",
+      "fail-on",
+      "scope"
+    ],
+    "probe": [],
+    "record": [
+      "cited",
+      "files",
+      "files-from-git",
+      "type"
+    ],
+    "resurrect": [
+      "apply",
+      "block",
+      "query"
+    ],
+    "score": [
+      "include-specs"
+    ],
+    "serve": [],
+    "sleep": [
+      "apply",
+      "block",
+      "budget",
+      "gate-runs",
+      "skip-gate"
+    ]
+  },
+  "outcomes": {
+    "success": 0,
+    "checkFindings": 1,
+    "checkFindingsWithBlock": 2,
+    "sleepGateFailed": 1,
+    "sleepGateFailedWithBlock": 2,
+    "usage": 64
+  },
+  "errorExit": [
+    {
+      "code": "PBT_GATE_FAILED",
+      "exit": 1
+    },
+    {
+      "code": "TOMBSTONE_NOT_FOUND",
+      "exit": 1
+    },
+    {
+      "code": "INTERNAL_ERROR",
+      "exit": 70
+    },
+    {
+      "code": "BUDGET_INFEASIBLE",
+      "exit": 74
+    },
+    {
+      "code": "CONFIG_INVALID",
+      "exit": 74
+    },
+    {
+      "code": "INVALID_INPUT",
+      "exit": 74
+    },
+    {
+      "code": "IO_FAILED",
+      "exit": 74
+    },
+    {
+      "code": "LOCKED",
+      "exit": 74
+    },
+    {
+      "code": "ONTOLOGY_INVALID_PATTERN",
+      "exit": 74
+    },
+    {
+      "code": "PARSE_DUPLICATE_ID",
+      "exit": 74
+    },
+    {
+      "code": "PARSE_INVALID_FRONTMATTER",
+      "exit": 74
+    },
+    {
+      "code": "PATH_ESCAPE",
+      "exit": 74
+    }
+  ]
+}

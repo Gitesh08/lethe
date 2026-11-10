@@ -1,0 +1,9 @@
+lethe sleep [--apply] [--budget <n>] [--skip-gate] [--gate-runs <n>] [--block]
+  Consolidate memory (dry-run unless --apply).
+
+Global options:
+  --workspace <path>   workspace root (default: current directory)
+  --json               print exactly one JSON envelope on stdout
+  --now <iso>          override the clock (ISO 8601 with Z or offset)
+  --commit <n>         override the commit counter
+  --help, --version

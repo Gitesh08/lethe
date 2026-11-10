@@ -1,0 +1,32 @@
+lethe <command> [options]
+
+lethe check [--scope steering-vs-specs|all] [--fail-on any|unresolvable|never] [--block]
+  Detect contradictions.
+
+lethe record --type task_passed|spec_cited|manual_pin [--files a,b] [--files-from-git] [--cited id,id]
+  Append a reinforcement event (estimated utility).
+
+lethe score [--include-specs]
+  Score every engram.
+
+lethe sleep [--apply] [--budget <n>] [--skip-gate] [--gate-runs <n>] [--block]
+  Consolidate memory (dry-run unless --apply).
+
+lethe resurrect --query "<id|text>" [--apply] [--block]
+  Restore archived engrams (dry-run unless --apply).
+
+lethe adopt [--apply]
+  Stamp state for engrams seen for the first time.
+
+lethe probe
+  Capture a hook stdin payload to .kiro/lethe/probe/.
+
+lethe serve
+  Run the MCP server on stdio.
+
+Global options:
+  --workspace <path>   workspace root (default: current directory)
+  --json               print exactly one JSON envelope on stdout
+  --now <iso>          override the clock (ISO 8601 with Z or offset)
+  --commit <n>         override the commit counter
+  --help, --version

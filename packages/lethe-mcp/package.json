@@ -3,12 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "bin": {
+    "lethe": "dist/lethe.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "build": "tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "print-mcp-config": "node scripts/print-mcp-config.mjs",
+    "req-trace": "node scripts/req-trace.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run --passWithNoTests"
+    "test": "npm run test:unit && npm run test:perf",
+    "test:unit": "vitest run --config vitest.unit.config.ts",
+    "test:perf": "vitest run --config vitest.perf.config.ts"
+  },
+  "dependencies": {
+    "@lethe/core": "0.1.0",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "fast-check": "3.23.2",
+    "zod": "4.6.7"
   },
   "devDependencies": {
-    "@types/node": "^26.6.6"
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "typescript": "5.9.3",
+    "vitest": "2.1.9"
   }
 }

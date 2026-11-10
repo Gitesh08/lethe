@@ -1,0 +1,9 @@
+lethe record --type task_passed|spec_cited|manual_pin [--files a,b] [--files-from-git] [--cited id,id]
+  Append a reinforcement event (estimated utility).
+
+Global options:
+  --workspace <path>   workspace root (default: current directory)
+  --json               print exactly one JSON envelope on stdout
+  --now <iso>          override the clock (ISO 8601 with Z or offset)
+  --commit <n>         override the commit counter
+  --help, --version

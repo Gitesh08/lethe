@@ -53,6 +53,8 @@ export { reinforce } from "./decay/reinforce.js";
 export { computeRetention } from "./decay/retention.js";
 export { computeDeltaC } from "./decay/delta.js";
 export { computeWeight } from "./decay/weight.js";
+export { globMatch } from "./decay/glob.js";
+export { deriveSpecStances } from "./contradiction/spec-stances.js";
 export { tierOf } from "./decay/tier.js";
 export { detectContradictions } from "./contradiction/detect.js";
 export { applyDefeats } from "./contradiction/defeat.js";

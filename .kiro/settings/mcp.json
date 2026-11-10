@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "lethe": {
+      "command": "node",
+      "args": ["packages/lethe-mcp/dist/lethe.mjs", "serve"],
+      "autoApprove": ["lethe_score_memories", "lethe_detect_contradictions"]
+    }
+  }
+}
